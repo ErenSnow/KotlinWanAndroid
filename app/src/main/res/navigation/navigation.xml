@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.snow.snowwanandroid.ui.HoneFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/systemFragment"
+        android:name="com.snow.snowwanandroid.ui.SystemFragment"
+        android:label="fragment_system"
+        tools:layout="@layout/fragment_system" />
+    <fragment
+        android:id="@+id/blogFragment"
+        android:name="com.snow.snowwanandroid.ui.BlogFragment"
+        android:label="fragment_public"
+        tools:layout="@layout/fragment_blog" />
+    <fragment
+        android:id="@+id/projectFragment"
+        android:name="com.snow.snowwanandroid.ui.ProjectFragment"
+        android:label="fragment_project"
+        tools:layout="@layout/fragment_project" />
+    <fragment
+        android:id="@+id/mineFragment"
+        android:name="com.snow.snowwanandroid.ui.MineFragment"
+        android:label="fragment_mine"
+        tools:layout="@layout/fragment_mine" />
+
+</navigation>
