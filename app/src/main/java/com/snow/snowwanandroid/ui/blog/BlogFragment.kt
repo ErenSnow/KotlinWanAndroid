@@ -14,11 +14,9 @@ class BlogFragment : BaseFragment<FragmentBlogBinding>() {
     }
 
     override fun createObserver() {
-        TODO("Not yet implemented")
     }
 
     override fun lazyLoadData() {
-        TODO("Not yet implemented")
     }
 
 }

@@ -10,14 +10,11 @@ class ProjectFragment : BaseFragment<FragmentProjectBinding>() {
     override fun getLayoutId(): Int = R.layout.fragment_project
 
     override fun initView(savedInstanceState: Bundle?) {
-        TODO("Not yet implemented")
     }
 
     override fun createObserver() {
-        TODO("Not yet implemented")
     }
 
     override fun lazyLoadData() {
-        TODO("Not yet implemented")
     }
 }

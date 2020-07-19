@@ -59,4 +59,6 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:4.11.0"
     annotationProcessor "com.github.bumptech.glide:compiler:4.11.0"
     annotationProcessor "androidx.cardview:cardview:1.0.0"
+    // 底部bottomBar
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
 }
