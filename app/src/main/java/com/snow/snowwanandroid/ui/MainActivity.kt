@@ -1,22 +1,21 @@
-package com.snow.snowwanandroid
+package com.snow.snowwanandroid.ui
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.snow.snowwanandroid.R
+import com.snow.snowwanandroid.base.BaseActivity
+import com.snow.snowwanandroid.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * 主界面
  */
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+    override fun initView(savedInstanceState: Bundle?) {
         // 初始化底部导航栏
         initBottomNavigation()
     }
@@ -41,4 +40,10 @@ class MainActivity : AppCompatActivity() {
             controller.popBackStack()
         }
     }
+
+    override fun createObserver() {
+    }
+
+    override fun getLayoutId(): Int =
+        R.layout.activity_main
 }

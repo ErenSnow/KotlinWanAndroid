@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.snow.snowwanandroid.ui.HoneFragment"
+        android:name="com.snow.snowwanandroid.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/systemFragment"
-        android:name="com.snow.snowwanandroid.ui.SystemFragment"
+        android:name="com.snow.snowwanandroid.ui.system.SystemFragment"
         android:label="fragment_system"
         tools:layout="@layout/fragment_system" />
     <fragment
         android:id="@+id/blogFragment"
-        android:name="com.snow.snowwanandroid.ui.BlogFragment"
+        android:name="com.snow.snowwanandroid.ui.blog.BlogFragment"
         android:label="fragment_public"
         tools:layout="@layout/fragment_blog" />
     <fragment
         android:id="@+id/projectFragment"
-        android:name="com.snow.snowwanandroid.ui.ProjectFragment"
+        android:name="com.snow.snowwanandroid.ui.project.ProjectFragment"
         android:label="fragment_project"
         tools:layout="@layout/fragment_project" />
     <fragment
         android:id="@+id/mineFragment"
-        android:name="com.snow.snowwanandroid.ui.MineFragment"
+        android:name="com.snow.snowwanandroid.ui.mine.MineFragment"
         android:label="fragment_mine"
         tools:layout="@layout/fragment_mine" />
 
