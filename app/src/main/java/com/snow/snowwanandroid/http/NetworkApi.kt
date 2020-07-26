@@ -5,17 +5,17 @@ import com.franmontiel.persistentcookiejar.cache.SetCookieCache
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor
 import com.google.gson.GsonBuilder
 import com.snow.snowwanandroid.MyApplication
-import com.snow.snowwanandroid.http.interceptor.LogInterceptor
+import com.snow.snowwanandroid.http.interceptor.CacheInterceptor
 import com.snow.snowwanandroid.http.interceptor.MyHeadInterceptor
+import com.snow.snowwanandroid.http.interceptor.logging.LogInterceptor
 import okhttp3.Cache
 import okhttp3.OkHttpClient
-import okhttp3.internal.cache.CacheInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
 
-//双重校验锁式-单例 封装NetApiService 方便直接快速调用简单的接口
+// 双重校验锁式-单例 封装NetApiService 方便直接快速调用简单的接口
 
 val apiService: ApiService by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
     NetworkApi.INSTANCE.getApi(ApiService::class.java, ApiService.BASE_URL)
