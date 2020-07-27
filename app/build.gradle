@@ -62,4 +62,5 @@ dependencies {
     annotationProcessor "androidx.cardview:cardview:1.0.0"
     // 底部bottomBar
     implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0-alpha06'
 }

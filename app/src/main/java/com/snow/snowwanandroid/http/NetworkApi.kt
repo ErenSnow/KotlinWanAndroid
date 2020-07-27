@@ -10,10 +10,16 @@ import com.snow.snowwanandroid.http.interceptor.MyHeadInterceptor
 import com.snow.snowwanandroid.http.interceptor.logging.LogInterceptor
 import okhttp3.Cache
 import okhttp3.OkHttpClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
+import kotlin.coroutines.suspendCoroutine
 
 // 双重校验锁式-单例 封装NetApiService 方便直接快速调用简单的接口
 
@@ -66,5 +72,23 @@ class NetworkApi : BaseNetworkApi() {
 
     val cookieJar: PersistentCookieJar by lazy {
         PersistentCookieJar(SetCookieCache(), SharedPrefsCookiePersistor(MyApplication.context))
+    }
+
+    public suspend fun <T> Call<T>.await(): T {
+        return suspendCoroutine { continuation ->
+            enqueue(object : Callback<T> {
+                override fun onResponse(call: Call<T>, response: Response<T>) {
+                    val body = response.body()
+                    if (body != null) continuation.resume(body)
+                    else continuation.resumeWithException(
+                        RuntimeException("response body is null")
+                    )
+                }
+
+                override fun onFailure(call: Call<T>, t: Throwable) {
+                    continuation.resumeWithException(t)
+                }
+            })
+        }
     }
 }

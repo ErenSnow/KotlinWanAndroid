@@ -6,7 +6,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
 import com.snow.snowwanandroid.R
 import com.snow.snowwanandroid.base.BaseFragment
-import com.snow.snowwanandroid.databinding.FragmentMainBinding
 import com.snow.snowwanandroid.ui.blog.BlogFragment
 import com.snow.snowwanandroid.ui.home.HomeFragment
 import com.snow.snowwanandroid.ui.mine.MineFragment
@@ -14,7 +13,7 @@ import com.snow.snowwanandroid.ui.project.ProjectFragment
 import com.snow.snowwanandroid.ui.system.SystemFragment
 import kotlinx.android.synthetic.main.fragment_main.*
 
-class MainFragment : BaseFragment<FragmentMainBinding>() {
+class MainFragment : BaseFragment() {
 
     override fun getLayoutId(): Int = R.layout.fragment_main
 

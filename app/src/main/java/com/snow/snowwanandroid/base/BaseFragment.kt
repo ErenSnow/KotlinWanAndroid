@@ -14,12 +14,12 @@ import androidx.lifecycle.Lifecycle
 /**
  * Fragment基类
  */
-abstract class BaseFragment<DB : ViewDataBinding> : Fragment() {
+abstract class BaseFragment : Fragment() {
 
     /**
      * 绑定的ViewDataBinding
      */
-    private lateinit var mDataBinging: ViewDataBinding
+    protected lateinit var mDataBinging: ViewDataBinding
 
     /**
      * Fragment对应的Activity的上下文

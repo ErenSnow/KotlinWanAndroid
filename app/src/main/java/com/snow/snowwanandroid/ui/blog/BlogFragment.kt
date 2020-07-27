@@ -3,9 +3,8 @@ package com.snow.snowwanandroid.ui.blog
 import android.os.Bundle
 import com.snow.snowwanandroid.R
 import com.snow.snowwanandroid.base.BaseFragment
-import com.snow.snowwanandroid.databinding.FragmentBlogBinding
 
-class BlogFragment : BaseFragment<FragmentBlogBinding>() {
+class BlogFragment : BaseFragment() {
 
     override fun getLayoutId(): Int = R.layout.fragment_blog
 

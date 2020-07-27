@@ -8,12 +8,12 @@ import androidx.databinding.ViewDataBinding
 /**
  * Activity基类
  */
-abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity() {
 
     /**
      * 绑定的ViewDataBinding
      */
-    private lateinit var mDataBinging: ViewDataBinding
+    protected lateinit var mDataBinging: ViewDataBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -3,9 +3,8 @@ package com.snow.snowwanandroid.ui.mine
 import android.os.Bundle
 import com.snow.snowwanandroid.R
 import com.snow.snowwanandroid.base.BaseFragment
-import com.snow.snowwanandroid.databinding.FragmentMineBinding
 
-class MineFragment : BaseFragment<FragmentMineBinding>() {
+class MineFragment : BaseFragment() {
 
     override fun getLayoutId(): Int = R.layout.fragment_mine
 
